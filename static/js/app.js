@@ -41,13 +41,26 @@ function drawBarGraph(sampleID) {
 
 }
 
+
 function drawBubbleChart(sampleID) {
     console.log(`drawBubbleChart(${sampleID})`);
 }
 
+
 function showMetaData(sampleID) {
     console.log(`showMetaData(${sampleID})`);
 }
+
+
+// event handler for selecting new sample
+function optionChanged(newSampleID) {
+    console.log(`User Selected ${newSampleID}`);
+
+    drawBarGraph(newSampleID);
+    drawBubbleChart(newSampleID);
+    showMetaData(newSampleID);
+}
+
 
 // creating initial dashboard from the first sample ID
 function initDashboard() {
