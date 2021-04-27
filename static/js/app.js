@@ -41,6 +41,15 @@ function drawBarGraph(sampleID) {
 
 }
 
+function drawBubbleChart(sampleID) {
+    console.log(`drawBubbleChart(${sampleID})`);
+}
+
+function showMetaData(sampleID) {
+    console.log(`showMetaData(${sampleID})`);
+}
+
+// creating initial dashboard from the first sample ID
 function initDashboard() {
     console.log("initDashboard()");
 
@@ -57,10 +66,13 @@ function initDashboard() {
                 .property("value", sampleID);
         });
 
+        var id = sampleNames[0];
+
+        // creating a stub for each graph
+        drawBarGraph(id);
+        drawBubbleChart(id);
+        showMetaData(id);
     });
-
-    
-
     // update the bargraph
 
     // update the bubble chart
