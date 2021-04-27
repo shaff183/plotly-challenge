@@ -53,12 +53,12 @@ function showMetaData(sampleID) {
 
 
 // event handler for selecting new sample
-function optionChanged(newSampleID) {
-    console.log(`User Selected ${newSampleID}`);
+function optionChanged(newSampleId) {
+    console.log(`User selected ${newSampleId}`);
 
-    drawBarGraph(newSampleID);
-    drawBubbleChart(newSampleID);
-    showMetaData(newSampleID);
+    drawBarGraph(newSampleId);
+    drawBubbleChart(newSampleId);
+    showMetaData(newSampleId);
 }
 
 
