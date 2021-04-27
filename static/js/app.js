@@ -48,7 +48,16 @@ function initDashboard() {
     var select = d3.select("#selDataset");
     d3.json("samples.json").then(function(data) {
         console.log(data);
-    })
+    
+        var sampleNames = data.names;
+
+        sampleNames.forEach(sampleID => {
+            select.append("option")
+                .text(sampleID)
+                .property("value", sampleID);
+        });
+
+    });
 
     
 
